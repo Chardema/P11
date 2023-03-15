@@ -1,5 +1,5 @@
 import React from "react";
-
+//titre centré
 const Banner = ({ image, text }) => {
   return (
     <div className="banner">

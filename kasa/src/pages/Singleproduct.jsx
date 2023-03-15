@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import products from "../__mocks__/data.json";
 
 import Rating from "../components/Rating";
@@ -10,6 +10,9 @@ import Collapse from "../components/Collapse";
 const SingleProduct = () => {
   const { productId } = useParams();
   const product = products.find((product) => product.id === productId);
+    if (!product) {
+        return <Navigate to="/404" />;
+    }
   const { title, location, rating, host, equipments, description, pictures } =
     product;
 

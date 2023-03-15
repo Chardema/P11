@@ -22,21 +22,21 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div>
-      <div className="App">
-        <Router>
-          <StyledNavbar />
-          <Routes>
-            <Route index element={<Home />} />
-            <Route path="about" element={<About />} />
-            <Route path="products/:productId" element={<Singleproduct />} />
-            <Route path="/kaza" element={<Navigate to="/" replace />} />
-            <Route path="*" element={<PageNotFound />} />
-          </Routes>
-          <Footer />
-        </Router>
+      <div>
+        <div className="App">
+          <Router>
+            <StyledNavbar />
+            <Routes>
+              <Route index element={<Home />} />
+              <Route path="about" element={<About />} />
+              <Route path="products/:productId" element={<Singleproduct />} />
+              <Route path="/kaza" element={<Navigate to="/" replace />} />
+              <Route path="*" element={<PageNotFound />} />
+            </Routes>
+            <Footer />
+          </Router>
+        </div>
       </div>
-    </div>
   );
 }
 
